@@ -3,84 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\esp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\Render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\Render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\hooks.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\esp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\ImGui\\imgui_widgets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\ImGui\\imgui_widgets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\offset.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\aim.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\aim.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\D3D11\\MyD3d11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\D3D11\\MyD3d11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\D3D11\\MyD3D_Utils.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\D3D11\\MyD3D_Utils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\interfaces.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\tool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\tool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\hooks.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\interfaces.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgameresourceservice.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\cgameresourceservice.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\iswapchaindx11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\iswapchaindx11.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgametracemanager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\cgametracemanager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,8 +18,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Render.cpp",
+              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\Render.cpp",
+              "RelativeDocumentMoniker": "CS2-AimBot\\Render.cpp",
+              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\Render.cpp*",
+              "RelativeToolTip": "CS2-AimBot\\Render.cpp*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-03T09:31:36.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cgametracemanager.cpp",
+              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgametracemanager.cpp",
+              "RelativeDocumentMoniker": "CS2-AimBot\\cgametracemanager.cpp",
+              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgametracemanager.cpp",
+              "RelativeToolTip": "CS2-AimBot\\cgametracemanager.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-03T09:31:28.557Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -103,250 +57,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MyD3D_Utils.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\D3D11\\MyD3D_Utils.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.cpp",
-              "RelativeToolTip": "CS2-AimBot\\D3D11\\MyD3D_Utils.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T04:57:31.591Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MyD3D_Utils.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\D3D11\\MyD3D_Utils.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3D_Utils.h",
-              "RelativeToolTip": "CS2-AimBot\\D3D11\\MyD3D_Utils.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T04:57:09.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MyD3d11.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\D3D11\\MyD3d11.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.cpp",
-              "RelativeToolTip": "CS2-AimBot\\D3D11\\MyD3d11.cpp",
-              "ViewState": "AQIAAHYAAAAAAAAAAIA2wJQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T04:42:17.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MyD3d11.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\D3D11\\MyD3d11.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\D3D11\\MyD3d11.h",
-              "RelativeToolTip": "CS2-AimBot\\D3D11\\MyD3d11.h",
-              "ViewState": "AQIAABkAAAAAAAAAAIBRwDkAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T04:42:11.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "vector.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\vector.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.cpp",
-              "RelativeToolTip": "CS2-AimBot\\vector.cpp",
-              "ViewState": "AQIAAB8AAAAAAAAAAIBRwDYAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T03:19:34.978Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "vector.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\vector.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\vector.h",
-              "RelativeToolTip": "CS2-AimBot\\vector.h",
-              "ViewState": "AQIAAG4BAAAAAAAAAIBAwHoBAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T03:13:28.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "esp.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\esp.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.h",
-              "RelativeToolTip": "CS2-AimBot\\esp.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T02:30:01.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "tool.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\tool.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.cpp",
-              "RelativeToolTip": "CS2-AimBot\\tool.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T02:18:19.867Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dllmain.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\dllmain.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\dllmain.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\dllmain.cpp",
-              "RelativeToolTip": "CS2-AimBot\\dllmain.cpp",
-              "ViewState": "AQIAADgAAAAAAAAAAAAkwEoAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T02:14:18.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "offset.hpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\offset.hpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp",
-              "RelativeToolTip": "CS2-AimBot\\offset.hpp",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBsAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T02:13:44.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "aim.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\aim.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\aim.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\aim.cpp",
-              "RelativeToolTip": "CS2-AimBot\\aim.cpp",
-              "ViewState": "AQIAAFUBAAAAAAAAAIBRwBkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T02:02:41.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "esp.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\esp.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\esp.cpp",
-              "RelativeToolTip": "CS2-AimBot\\esp.cpp",
-              "ViewState": "AQIAAJIAAAAAAAAAAAA8wK4AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T01:49:44.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "hooks.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\hooks.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.cpp",
-              "RelativeToolTip": "CS2-AimBot\\hooks.cpp",
-              "ViewState": "AQIAAOwAAAAAAAAAAAAAAPkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T01:25:21.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "imgui_widgets.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\ImGui\\imgui_widgets.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\ImGui\\imgui_widgets.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\ImGui\\imgui_widgets.cpp",
-              "RelativeToolTip": "CS2-AimBot\\ImGui\\imgui_widgets.cpp",
-              "ViewState": "AQIAAPESAAAAAAAAAAAAAPYSAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-03T03:18:52.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "tool.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\tool.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\tool.h",
-              "RelativeToolTip": "CS2-AimBot\\tool.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T02:21:25.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "hooks.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\hooks.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\hooks.h",
-              "RelativeToolTip": "CS2-AimBot\\hooks.h",
-              "ViewState": "AQIAACsAAAAAAAAAAIBRwEsAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T01:34:25.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "cgameresourceservice.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgameresourceservice.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\cgameresourceservice.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgameresourceservice.h",
-              "RelativeToolTip": "CS2-AimBot\\cgameresourceservice.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T02:03:18.618Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "iswapchaindx11.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\iswapchaindx11.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\iswapchaindx11.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\iswapchaindx11.h",
-              "RelativeToolTip": "CS2-AimBot\\iswapchaindx11.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T01:28:39.036Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "interfaces.h",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.h",
-              "RelativeDocumentMoniker": "CS2-AimBot\\interfaces.h",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.h",
-              "RelativeToolTip": "CS2-AimBot\\interfaces.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-09-02T01:26:56.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "interfaces.cpp",
-              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.cpp",
-              "RelativeDocumentMoniker": "CS2-AimBot\\interfaces.cpp",
-              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\interfaces.cpp",
-              "RelativeToolTip": "CS2-AimBot\\interfaces.cpp",
-              "ViewState": "AQIAAIUAAAAAAAAAAAAkwHoAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-02T01:26:23.005Z"
             }
           ]
         },
