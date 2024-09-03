@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2024-08-22 00:13:39.639692900 UTC
+// 2024-09-03 09:13:49.395256300 UTC
 
 #pragma once
 
@@ -6710,7 +6710,7 @@ namespace cs2_dumper {
             // NetworkVarNames: m_AttributeManager (CAttributeContainer)
             namespace C_Chicken {
                 constexpr std::ptrdiff_t m_hHolidayHatAddon = 0x1160; // CHandle<CBaseAnimGraph>
-                constexpr std::ptrdiff_t m_jumpedThisFrame = 0x1164; // bool 
+                constexpr std::ptrdiff_t m_jumpedThisFrame = 0x1164; // bool
                 constexpr std::ptrdiff_t m_leader = 0x1168; // CHandle<C_CSPlayerPawn>
                 constexpr std::ptrdiff_t m_AttributeManager = 0x1170; // C_AttributeContainer
                 constexpr std::ptrdiff_t m_bAttributesInitialized = 0x1618; // bool

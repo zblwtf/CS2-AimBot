@@ -7,7 +7,7 @@
 // used: chookobject
 #include "detourhook.h"
 
-
+#include "safetyhook.hpp"
 
 namespace VTABLE
 {
@@ -67,4 +67,10 @@ namespace H
 	HRESULT __stdcall Present(IDXGISwapChain* pSwapChain, UINT uSyncInterval, UINT uFlags);
 
 	HRESULT CS_FASTCALL ResizeBuffers(IDXGISwapChain* pSwapChain, uint32_t nBufferCount, uint32_t nWidth, uint32_t nHeight, DXGI_FORMAT newFormat, uint32_t nFlags);
+
+	
 }
+extern safetyhook::MidHook g_createmove_hook;
+extern safetyhook::InlineHook g_present_hook;
+extern safetyhook::InlineHook g_resizebuffers_hook;
+extern safetyhook::InlineHook g_createswapchain_hook;

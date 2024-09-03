@@ -10,6 +10,14 @@ struct Matrix3x4_t;
 
 // @source: master/public/mathlib/vector.h
 
+struct view_matrix_t {
+	float* operator[ ](int index) {
+		return matrix[index];
+	}
+	float matrix[4][4];
+};
+
+
 struct Vector2D_t
 {
 	constexpr Vector2D_t(const float x = 0.0f, const float y = 0.0f) :
@@ -367,6 +375,9 @@ struct Vector_t
 
 	/// @returns: matrix converted from forward direction vector
 	[[nodiscard]] Matrix3x4_t ToMatrix() const;
+
+	Vector_t WTS(view_matrix_t matrix) const;
+	
 
 	float x = 0.0f, y = 0.0f, z = 0.0f;
 };

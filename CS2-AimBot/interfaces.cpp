@@ -2,7 +2,7 @@
 #include <d3d11.h>
 
 #include "interfaces.h"
-
+#include "iswapchaindx11.h"
 // used: findpattern, callvirtual, getvfunc...
 #include "memory.h"
 #include "csgoinput.h"
@@ -94,9 +94,89 @@ bool I::Setup()
 	bSuccess &= (GameTraceManager != nullptr);
 
 
+	SwapChain = **reinterpret_cast<ISwapChainDx11***>(MEM::ResolveRelativeAddress(MEM::FindPattern(RENDERSYSTEM_DLL, CS_XOR("66 0F 7F 0D ? ? ? ? 66 0F 7F 05 ? ? ? ? 0F 1F 40")), 0x4, 0x8));
+	bSuccess &= (SwapChain != nullptr);
+
+	// grab's d3d11 interfaces for later use
+	if (SwapChain != nullptr)
+	{
+		if (FAILED(SwapChain->pDXGISwapChain->GetDevice(__uuidof(ID3D11Device), (void**)&Device)))
+		{
+			
+			CS_ASSERT(false);
+			return false;
+		}
+		else
+			// we successfully got device, so we can get immediate context
+			Device->GetImmediateContext(&DeviceContext);
+	}
+	bSuccess &= (Device != nullptr && DeviceContext != nullptr);
 
 
 	return bSuccess;
 }
 
 
+
+void I::CreateRenderTarget()
+{
+	if (FAILED(SwapChain->pDXGISwapChain->GetDevice(__uuidof(ID3D11Device), (void**)&Device)))
+	{
+		
+		CS_ASSERT(false);
+	}
+	else
+		// we successfully got device, so we can get immediate context
+		Device->GetImmediateContext(&DeviceContext);
+
+	// @note: i dont use this anywhere else so lambda is fine
+	static const auto GetCorrectDXGIFormat = [](DXGI_FORMAT eCurrentFormat)
+		{
+			switch (eCurrentFormat)
+			{
+			case DXGI_FORMAT_R8G8B8A8_UNORM_SRGB:
+				return DXGI_FORMAT_R8G8B8A8_UNORM;
+			}
+
+			return eCurrentFormat;
+		};
+
+	DXGI_SWAP_CHAIN_DESC sd;
+	SwapChain->pDXGISwapChain->GetDesc(&sd);
+
+	ID3D11Texture2D* pBackBuffer = nullptr;
+	if (SUCCEEDED(SwapChain->pDXGISwapChain->GetBuffer(0, IID_PPV_ARGS(&pBackBuffer))))
+	{
+		if (pBackBuffer)
+		{
+			D3D11_RENDER_TARGET_VIEW_DESC desc{};
+			desc.Format = static_cast<DXGI_FORMAT>(GetCorrectDXGIFormat(sd.BufferDesc.Format));
+			desc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2D;
+			if (FAILED(Device->CreateRenderTargetView(pBackBuffer, &desc, &RenderTargetView)))
+			{
+				
+				desc.ViewDimension = D3D11_RTV_DIMENSION_TEXTURE2DMS;
+				if (FAILED(Device->CreateRenderTargetView(pBackBuffer, &desc, &RenderTargetView)))
+				{
+				
+					if (FAILED(Device->CreateRenderTargetView(pBackBuffer, NULL, &RenderTargetView)))
+					{
+						
+						CS_ASSERT(false);
+					}
+				}
+			}
+			pBackBuffer->Release();
+			pBackBuffer = nullptr;
+		}
+	}
+}
+
+void I::DestroyRenderTarget()
+{
+	if (RenderTargetView != nullptr)
+	{
+		RenderTargetView->Release();
+		RenderTargetView = nullptr;
+	}
+}

@@ -8,9 +8,10 @@
 #include "vector.h"
 #include "Timer.hpp"
 extern HWND hWindow; 
-extern window_size window_info;
-extern uintptr_t client_address;
 
+extern uintptr_t client_address;
+extern int screenWidth;
+extern int screenHeight;
 window_size get_window_size()
 {
 	window_size sz;
@@ -34,7 +35,7 @@ bool WorldToScreen(const Vector_t& pos, Vector2D_t& topos)
 {
 	CView pMatrix = *reinterpret_cast<CView*>(client_address + cs2_dumper::offsets::client_dll::dwViewMatrix);
 	
-	return pMatrix.WorldToScreen(pos, topos, window_info.width, window_info.height);
+	return pMatrix.WorldToScreen(pos, topos, screenWidth, screenHeight);
 }
 bool isVisible(C_CSPlayerPawn* pentity, int hitbox_id)
 {
@@ -59,11 +60,11 @@ typedef struct CViewMatrix
 	float Matrix[16];
 };
 
-CViewMatrix GetMatrixViewport(window_size info)
+CViewMatrix GetMatrixViewport()
 {
 
-	int width = info.width;
-	int height = info.height;
+	int width = screenWidth;
+	int height = screenHeight;
 	return
 	{ width * 0.5f, 0, 0, 0,
 		0, -(height * 0.5f), 0, 0,
@@ -87,9 +88,9 @@ Vector_t ViewportTransform(CViewMatrix m, Vector_t v)
 
 Vector_t GetPositionScreen(int fov, QAngle_t AimPunchAngle)
 {
-	static CViewMatrix playViewMatrix = GetMatrixViewport(window_info);
+	static CViewMatrix playViewMatrix = GetMatrixViewport();
 
-	auto spectRatio = (double)window_info.width / window_info.height;
+	auto spectRatio = (double)screenWidth / screenHeight;
 
 
 	
@@ -154,7 +155,7 @@ void SetViewAngle(QAngle_t dstangle, QAngle_t sourceAngle)
 
 			auto angle = sourceAngle - dstangle;
 			angle.Clamp();
-			auto screen_pixels = AngleToPixels(angle, 70, window_info.width, window_info.height);
+			auto screen_pixels = AngleToPixels(angle, 70, screenWidth, screenHeight);
 			MoveMouse({ screen_pixels.x,screen_pixels.y });
 
 			hhh = true;

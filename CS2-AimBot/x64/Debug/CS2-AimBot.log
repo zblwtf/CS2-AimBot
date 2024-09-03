@@ -1,4 +1,93 @@
-﻿  hooks.cpp
+﻿  Bone.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
+  (编译源文件“Bone.cpp”)
+  
+  aim.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
+  (编译源文件“aim.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(65,45): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(66,45): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(93,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(93,66): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(94,24): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(94,54): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(95,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  cgametracemanager.cpp
+  dllmain.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
+  (编译源文件“dllmain.cpp”)
+  
+  entity.cpp
+  esp.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,105): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,79): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,72): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,59): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,56): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,95): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,76): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,72): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,60): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,56): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+  (编译源文件“esp.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(76,19): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(76,22): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(76,25): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(77,18): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(77,23): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(77,28): warning C4838: 从“int”转换到“ImU32”需要收缩转换
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(149,25): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(150,25): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(164,96): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(172,21): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(170,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(169,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(168,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(167,34): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(178,97): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(186,21): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(184,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(183,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(182,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(181,34): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  hooks.cpp
+  interfaces.cpp
+  matrix.cpp
+  qangle.cpp
+  tool.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
+  (编译源文件“tool.cpp”)
+  
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(61,2): warning C4091: “typedef ”: 没有声明变量时忽略“CViewMatrix”的左侧
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(81,10): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(125,30): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(127,14): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(132,51): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.cpp(133,53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
   vector.cpp
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\vector.cpp(69,11): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\vector.cpp(70,11): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
   正在生成代码...
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\dllmain.cpp(79,1): warning C4715: “Setup”: 不是所有的控件路径都返回值
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\Bone.cpp(61,1): warning C4715: “CBone::GetBoneData”: 不是所有的控件路径都返回值
   CS2-AimBot.vcxproj -> C:\Users\23035\source\repos\CS2-AimBot\x64\Debug\CS2-AimBot.dll

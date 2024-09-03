@@ -166,7 +166,7 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 		// Make sure they're alive
 		if (!pPlayer.GetIsAlive())
 			continue;
-
+		 
 		// Check if they're an enemy
 		if (pLocalController->GetTeamID() == pPlayer.GetTeamID())
 			continue;
@@ -326,7 +326,7 @@ void RCS_OnCreateMove(CCSGOInput* pCsgoInput, CUserCmd* pUserCmd,
 	//CCSPlayerController pPlayer((uintptr_t)pEntity);
 	static std::chrono::time_point LastTimePoint = std::chrono::steady_clock::now();
 	auto CurTimePoint = std::chrono::steady_clock::now();
-	if (CurTimePoint - LastTimePoint >= std::chrono::milliseconds(200))
+	if (CurTimePoint - LastTimePoint >= std::chrono::milliseconds(500))
 	{
 		const bool isAlreadyShooting = GetAsyncKeyState(VK_LBUTTON) < 0;
 		if (!isAlreadyShooting)

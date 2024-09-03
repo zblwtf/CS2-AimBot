@@ -6,11 +6,20 @@
 #include "offset.hpp"
 #include "tool.h"
 #include "client.dll.hpp"
+#include "esp.h"
+
+
 HWND hWindow;
-window_size window_info;
 FILE* stream;
 uintptr_t client_address;
+uintptr_t engine2_address;
 extern bool trigger_bot_active;
+
+int screenWidth = 1024;
+int screenHeight = 726;
+
+
+
 static BOOL CALLBACK EnumWindowsCallback(HWND handle, LPARAM lParam)
 {
     const auto MainWindow = [handle]()
@@ -44,10 +53,18 @@ HWND Get_Window_Handle()
 bool Setup()
 {
     client_address = (uintptr_t)GetModuleHandleA("client.dll");
+    engine2_address = (uintptr_t)GetModuleHandleA("engine2.dll");
+
+    screenWidth = *(int*)(engine2_address + cs2_dumper::offsets::engine2_dll::dwWindowWidth);
+    screenHeight = *(int*)(engine2_address + cs2_dumper::offsets::engine2_dll::dwWindowHeight);
+
+
    hWindow = Get_Window_Handle();
-   window_info = get_window_size();
+ 
    AllocConsole();
    freopen_s(&stream, "CONOUT$", "w", stdout);
+
+
 
     if (!I::Setup())
     {
@@ -85,13 +102,15 @@ DWORD WINAPI start_point(HMODULE hModule)
                 printf("[trigger_bot_status] : !Active\n");
             }
         }
-        Sleep(10);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(10)); // Increase sleep duration
+      
         
     }
 
-    freopen_s(&stream, "CONOUT$", "w", stdout);
+    if (stream)
+        CloseHandle(stream);
 
-    CloseHandle(stream);
     // free allocated memory for console
     if (::FreeConsole() != TRUE)
         return 0;
@@ -101,7 +120,7 @@ DWORD WINAPI start_point(HMODULE hModule)
         ::PostMessageW(hConsoleWindow, WM_CLOSE, 0U, 0L);
 
     H::Destroy();
-
+    do_esp_destroy();
 
     FreeLibraryAndExitThread(hModule, 0);
 }
