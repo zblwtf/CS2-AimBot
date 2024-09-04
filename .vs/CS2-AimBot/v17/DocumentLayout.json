@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\client.dll.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\client.dll.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\offset.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\Render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D6F5742F-5F5D-4343-B970-74E9B4EE687D}|CS2-AimBot\\CS2-AimBot.vcxproj|solutionrelative:CS2-AimBot\\Render.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -18,11 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "offset.hpp",
+              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp",
+              "RelativeDocumentMoniker": "CS2-AimBot\\offset.hpp",
+              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\offset.hpp",
+              "RelativeToolTip": "CS2-AimBot\\offset.hpp",
+              "ViewState": "AQIAAB8AAAAAAAAAAIBAwCcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-04T01:04:14.333Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "client.dll.hpp",
+              "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\client.dll.hpp",
+              "RelativeDocumentMoniker": "CS2-AimBot\\client.dll.hpp",
+              "ToolTip": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\client.dll.hpp",
+              "RelativeToolTip": "CS2-AimBot\\client.dll.hpp",
+              "ViewState": "AQIAADIaAAAAAAAAAIBAwEQaAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-04T01:04:01.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Render.cpp",
               "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\Render.cpp",
               "RelativeDocumentMoniker": "CS2-AimBot\\Render.cpp",
@@ -35,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "cgametracemanager.cpp",
               "DocumentMoniker": "C:\\Users\\23035\\source\\repos\\CS2-AimBot\\CS2-AimBot\\cgametracemanager.cpp",
               "RelativeDocumentMoniker": "CS2-AimBot\\cgametracemanager.cpp",
@@ -43,20 +89,7 @@
               "RelativeToolTip": "CS2-AimBot\\cgametracemanager.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-03T09:31:28.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2024-09-03T09:31:28.557Z"
             }
           ]
         },
