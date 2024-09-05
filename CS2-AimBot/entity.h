@@ -199,7 +199,8 @@ class C_CSPlayerPawn
 {
 public:
 	C_CSPlayerPawn(std::uintptr_t base) :pthis(base) {}
-	C_CSPlayerPawn() :pthis(0) {}
+	C_CSPlayerPawn() :pthis(0) {};
+	C_CSPlayerPawn(const C_CSPlayerPawn& ref) :pthis(ref.pthis) {};
 	std::uint32_t GetOwnerHandleIndex();
 	std::uint16_t GetCollisionMask();
 	std::uintptr_t pthis;

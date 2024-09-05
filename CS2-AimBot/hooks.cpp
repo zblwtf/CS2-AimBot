@@ -232,6 +232,12 @@ bool __fastcall H::CreateMove(CCSGOInput* pInput, int nSlot, bool bActive,bool b
 
 HRESULT __stdcall H::Present(IDXGISwapChain* pSwapChain, UINT uSyncInterval, UINT uFlags)
 {
+	/*if (!g_myD3d11.bDrawInit)
+	{
+		if (I::Engine->IsConnected() && I::Engine->IsInGame())
+			g_myD3d11.bDrawInit = g_myD3d11.InitDraw(pSwapChain);
+
+	}*/
 	
 	// recreate it if it's not valid
 	if (I::RenderTargetView == nullptr)
@@ -243,18 +249,13 @@ HRESULT __stdcall H::Present(IDXGISwapChain* pSwapChain, UINT uSyncInterval, UIN
 	if (I::RenderTargetView != nullptr)
 		I::DeviceContext->OMSetRenderTargets(1, &I::RenderTargetView, nullptr);
 
-	if (!g_myD3d11.bDrawInit)
-	{
-		if (I::Engine->IsConnected() && I::Engine->IsInGame())
-			g_myD3d11.bDrawInit = g_myD3d11.InitDraw(pSwapChain);
+	
+	
+	//if (g_myD3d11.bDrawInit)
+	//{
+	//	//do_present();
 
-	}
-	else
-	{
-		do_present();
-	}
-	
-	
+	//}
 
 
 	

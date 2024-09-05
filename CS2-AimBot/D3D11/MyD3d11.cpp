@@ -1,5 +1,5 @@
 #include "MyD3D11.h"
-
+#include "../interfaces.h"
 MyD3D11::~MyD3D11()
 {
 	SafeRelease(m_constantBuffer);
@@ -134,6 +134,7 @@ bool MyD3D11::SetDeviceContextRenderTarget()
 	if (FAILED(hRes)) return false;
 
 	hRes = m_device->CreateRenderTargetView(backBuffer, nullptr, &m_renderTargetView);
+	I::RenderTargetView = m_renderTargetView;
 	backBuffer->Release();
 	if (FAILED(hRes)) return false;
 

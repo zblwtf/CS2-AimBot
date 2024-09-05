@@ -113,116 +113,173 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 
 	// The current best distance
 	float flDistance = INFINITY;
+	static std::chrono::time_point LastTimePoint = std::chrono::steady_clock::now();
 	// The target we have chosen
-	C_CSPlayerPawn pTarget;
+	static C_CSPlayerPawn BestTarget;
 	// Cache'd position
 	Vector_t vecBestPosition = Vector_t();
 
 	// Entity loop
 	const int iHighestIndex = I::GameResourceService->pGameEntitySystem->GetHighestEntityIndex();
 
-	for (int nIndex = 1; nIndex <= iHighestIndex; nIndex++)
+	//如果已经有目标了且目标没死那就不用更新目标了
+	bool need_to_update_target = true;
+
+	
+
+	if (BestTarget.pthis != NULL)
 	{
-		// Get the entity
-		uintptr_t pEntity = (uintptr_t)I::GameResourceService->pGameEntitySystem->Get(nIndex);
-		if (pEntity == NULL)
-			continue;
+		if (BestTarget.GetHealth() > 0)
+		{
+			const int iBone = 6;
+			Vector_t vecPos;
+			BestTarget.get_bone_data(iBone, vecPos);
+			GameTrace_t trace = GameTrace_t();
+			TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
+			Ray_t ray = Ray_t();
 
-		
+			// cast a ray from local player eye positon -> player head bone
+			// @note: would recommend checking for nullptrs
+			I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), vecPos, &filter, &trace);
+			// check if the hit entity is the one we wanted to check and if the trace end point is visible
+			if ((uintptr_t)trace.m_pHitEntity == BestTarget.pthis || trace.IsVisible())
+			{
+				need_to_update_target = false;
+			}
+		}
 
-		
-
-
-		// Get the class info
-		void* pClassInfo = nullptr;
-		((CEntityInstance*)pEntity)->GetSchemaClassInfo(&pClassInfo);
-		if (pClassInfo == nullptr)
-			continue;
-		char* pszName = *reinterpret_cast<char**>((uintptr_t)pClassInfo + 0x8);
-		const FNV1A_t uHashedName = FNV1A::Hash(pszName);
-
-		// Make sure they're a player controller
-		if (uHashedName != FNV1A::HashConst("CCSPlayerController"))
-			continue;
-
-
-		//
-
-		//// Cast to player controller
-		CCSPlayerController pPlayer(pEntity);
-		//
-		//// Check the entity is not us
-		if (pPlayer.Address == pLocalController->Address)
-			continue;
-
-		// Get the player pawn
-		uintptr_t pPawn = (uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pPlayer.GetPawnHandle());
-
-
-		C_CSPlayerPawn playPawn(pPawn);
-		if (pPawn == NULL)
-			continue;
-
-		// Make sure they're alive
-		if (!pPlayer.GetIsAlive())
-			continue;
-		 
-		// Check if they're an enemy
-		if (pLocalController->GetTeamID() == pPlayer.GetTeamID())
-			continue;
-
-
-		////C_BaseEntity->m_pGameSceneNode
-		////CGameSceneNode::m_bDormant
-
-		// Check if they're dormant
-		uintptr_t pGameSceneNode = *reinterpret_cast<uintptr_t*>(pPawn + cs2_dumper::schemas::client_dll::C_BaseEntity::m_pGameSceneNode);
-		if (!pGameSceneNode)continue;
-		if (*reinterpret_cast<bool*>(pGameSceneNode + cs2_dumper::schemas::client_dll::CGameSceneNode::m_bDormant))continue;
-
-
-		//
-
-		//
-		const int iBone = 6; // You may wish to change this dynamically but for now let's target the head.
-
-		// Get the bone's position
-		
-		Vector_t vecPos;
-		playPawn.get_bone_data(iBone, vecPos);
-
-		// @note: this is a simple example of how to check if the player is visible
-
-		// initialize trace, construct filterr and initialize ray
-		GameTrace_t trace = GameTrace_t();
-		TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
-		Ray_t ray = Ray_t();
-
-		// cast a ray from local player eye positon -> player head bone
-		// @note: would recommend checking for nullptrs
-		I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), vecPos, &filter, &trace);
-		// check if the hit entity is the one we wanted to check and if the trace end point is visible
-		if ((uintptr_t)trace.m_pHitEntity != pPawn || !trace.IsVisible())// if invisible, skip this entity
-			continue;
-
-		// Get the distance/weight of the move 
-		float flCurrentDistance = GetAngularDistance(pBaseCmd, vecPos, &pLocalPawn);
-		
-		// Better move found, override.
-		
-		pTarget = playPawn;
-		flDistance = flCurrentDistance;
-		vecBestPosition = vecPos;
 	}
 
+
+	if (need_to_update_target)
+	{
+		BestTarget = C_CSPlayerPawn();
+
+		LastTimePoint -= std::chrono::milliseconds(500);
+		for (int nIndex = 1; nIndex <= iHighestIndex; nIndex++)
+		{
+			// Get the entity
+			uintptr_t pEntity = (uintptr_t)I::GameResourceService->pGameEntitySystem->Get(nIndex);
+			if (pEntity == NULL)
+				continue;
+
+
+
+
+
+
+			// Get the class info
+			void* pClassInfo = nullptr;
+			((CEntityInstance*)pEntity)->GetSchemaClassInfo(&pClassInfo);
+			if (pClassInfo == nullptr)
+				continue;
+			char* pszName = *reinterpret_cast<char**>((uintptr_t)pClassInfo + 0x8);
+			const FNV1A_t uHashedName = FNV1A::Hash(pszName);
+
+			// Make sure they're a player controller
+			if (uHashedName != FNV1A::HashConst("CCSPlayerController"))
+				continue;
+
+
+			//
+
+			//// Cast to player controller
+			CCSPlayerController pPlayer(pEntity);
+			//
+			//// Check the entity is not us
+			if (pPlayer.Address == pLocalController->Address)
+				continue;
+
+			// Get the player pawn
+			uintptr_t pPawn = (uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pPlayer.GetPawnHandle());
+
+
+			C_CSPlayerPawn playPawn(pPawn);
+			if (pPawn == NULL)
+				continue;
+
+			// Make sure they're alive
+			if (!pPlayer.GetIsAlive())
+				continue;
+
+			// Check if they're an enemy
+			if (pLocalController->GetTeamID() == pPlayer.GetTeamID())
+				continue;
+
+
+			////C_BaseEntity->m_pGameSceneNode
+			////CGameSceneNode::m_bDormant
+
+			// Check if they're dormant
+			uintptr_t pGameSceneNode = *reinterpret_cast<uintptr_t*>(pPawn + cs2_dumper::schemas::client_dll::C_BaseEntity::m_pGameSceneNode);
+			if (!pGameSceneNode)continue;
+			if (*reinterpret_cast<bool*>(pGameSceneNode + cs2_dumper::schemas::client_dll::CGameSceneNode::m_bDormant))continue;
+
+
+			//
+
+			//
+			const int iBone = 6; // You may wish to change this dynamically but for now let's target the head.
+
+			// Get the bone's position
+
+			Vector_t vecPos;
+			playPawn.get_bone_data(iBone, vecPos);
+
+			// @note: this is a simple example of how to check if the player is visible
+
+			// initialize trace, construct filterr and initialize ray
+			GameTrace_t trace = GameTrace_t();
+			TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
+			Ray_t ray = Ray_t();
+
+			// cast a ray from local player eye positon -> player head bone
+			// @note: would recommend checking for nullptrs
+			I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), vecPos, &filter, &trace);
+			// check if the hit entity is the one we wanted to check and if the trace end point is visible
+			if ((uintptr_t)trace.m_pHitEntity != pPawn || !trace.IsVisible())// if invisible, skip this entity
+				continue;
+
+			// Get the distance/weight of the move 
+			float flCurrentDistance = GetAngularDistance(pBaseCmd, vecPos, &pLocalPawn);
+
+			// Better move found, override.
+			auto CurTimePoint = std::chrono::steady_clock::now();
+
+
+			if (flCurrentDistance < flDistance)
+			{
+				if (CurTimePoint - LastTimePoint >= std::chrono::milliseconds(500))
+				{
+
+					BestTarget = playPawn;
+					flDistance = flCurrentDistance;
+					vecBestPosition = vecPos;
+					LastTimePoint = CurTimePoint;
+
+				}
+			}
+
+
+
+		}
+	}
+
+
+	
+
 	// Check if a target was found
-	if (pTarget.pthis == NULL)
+	if (BestTarget.pthis == NULL )
+	{
+	
 		return;
+	}
+		
 
 	// Point at them
 	QAngle_t* pViewAngles = &(pBaseCmd->pViewAngles->angValue); // Just for readability sake!
 	QAngle_t tempViewAngles = *pViewAngles;
-	pTarget.get_bone_data(6, vecBestPosition);
+	BestTarget.get_bone_data(6, vecBestPosition);
 
 	// Find the change in angles
 	QAngle_t vNewAngles = GetAngularDifference(pBaseCmd, vecBestPosition, &pLocalPawn);
