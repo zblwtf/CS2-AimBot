@@ -13,6 +13,8 @@
 #include "tool.h"
 #include <stdio.h>
 #include <chrono>
+#include "offset.hpp"
+#include "global.hpp"
 bool trigger_bot_active = true;
 extern uintptr_t client_address;
 extern window_size window_info;
@@ -100,6 +102,8 @@ Vector_t FromAngle(const QAngle_t& angle) noexcept {
 
 void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerController* pLocalController)
 {
+	if (!Globals::Aimbot::Aim)
+		return;
 	
 	C_CSPlayerPawn pLocalPawn((uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pLocalController->GetPawnHandle()));
 	if (pLocalPawn.pthis == NULL)
@@ -122,32 +126,51 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 	// Entity loop
 	const int iHighestIndex = I::GameResourceService->pGameEntitySystem->GetHighestEntityIndex();
 
-	//如果已经有目标了且目标没死那就不用更新目标了
+	
 	bool need_to_update_target = true;
 
 	
-
+	//如果 已经有目标了 且目标没死 且还没超过200ms且 还能被看到 那就不用更新目标了
 	if (BestTarget.pthis != NULL)
 	{
 		if (BestTarget.GetHealth() > 0)
 		{
-			const int iBone = 6;
-			Vector_t vecPos;
-			BestTarget.get_bone_data(iBone, vecPos);
-			GameTrace_t trace = GameTrace_t();
-			TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
-			Ray_t ray = Ray_t();
 
-			// cast a ray from local player eye positon -> player head bone
-			// @note: would recommend checking for nullptrs
-			I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), vecPos, &filter, &trace);
-			// check if the hit entity is the one we wanted to check and if the trace end point is visible
-			if ((uintptr_t)trace.m_pHitEntity == BestTarget.pthis || trace.IsVisible())
+			//如果超过200ms
+			auto CurTimePoint = std::chrono::steady_clock::now();
+			if (CurTimePoint - LastTimePoint > std::chrono::milliseconds(200))
 			{
-				need_to_update_target = false;
-			}
-		}
 
+
+				uintptr_t pGameSceneNode = *reinterpret_cast<uintptr_t*>(BestTarget.pthis + cs2_dumper::schemas::client_dll::C_BaseEntity::m_pGameSceneNode);
+				
+				if (pGameSceneNode && !*reinterpret_cast<bool*>(pGameSceneNode + cs2_dumper::schemas::client_dll::CGameSceneNode::m_bDormant))
+				{
+					const int iBone = 6;
+					Vector_t vecPos;
+					BestTarget.get_bone_data(iBone, vecPos);
+					GameTrace_t trace = GameTrace_t();
+					TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
+					Ray_t ray = Ray_t();
+
+					// cast a ray from local player eye positon -> player head bone
+					// @note: would recommend checking for nullptrs
+					I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), vecPos, &filter, &trace);
+					// check if the hit entity is the one we wanted to check and if the trace end point is visible
+					if ((uintptr_t)trace.m_pHitEntity == BestTarget.pthis || trace.IsVisible())
+					{
+						need_to_update_target = false;
+						LastTimePoint = CurTimePoint;
+					}
+
+				}
+				
+		
+			}
+
+			
+		}
+		
 	}
 
 
@@ -155,7 +178,7 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 	{
 		BestTarget = C_CSPlayerPawn();
 
-		LastTimePoint -= std::chrono::milliseconds(500);
+		//遍历出距离最近的
 		for (int nIndex = 1; nIndex <= iHighestIndex; nIndex++)
 		{
 			// Get the entity
@@ -244,28 +267,24 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 			float flCurrentDistance = GetAngularDistance(pBaseCmd, vecPos, &pLocalPawn);
 
 			// Better move found, override.
-			auto CurTimePoint = std::chrono::steady_clock::now();
+			
 
 
 			if (flCurrentDistance < flDistance)
 			{
-				if (CurTimePoint - LastTimePoint >= std::chrono::milliseconds(500))
-				{
 
-					BestTarget = playPawn;
-					flDistance = flCurrentDistance;
-					vecBestPosition = vecPos;
-					LastTimePoint = CurTimePoint;
-
-				}
+				BestTarget = playPawn;
+				flDistance = flCurrentDistance;
+				vecBestPosition = vecPos;
 			}
 
 
 
 		}
+
 	}
 
-
+	
 	
 
 	// Check if a target was found
@@ -318,7 +337,18 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 	tempViewAngles.y += (vNewAngles.y - aimPunch.y) ;
 	tempViewAngles.Normalize();
 
-	SetViewAngle(tempViewAngles, *pViewAngles);
+
+	if (Globals::Aimbot::ByMouse)
+	{
+		SetViewAngle(tempViewAngles, *pViewAngles);
+	}
+	else {
+		*reinterpret_cast<QAngle_t*>(client_address + cs2_dumper::offsets::client_dll::dwViewAngles) = tempViewAngles;
+	}
+	/*SetViewAngle(tempViewAngles, *pViewAngles);*/
+
+	
+
 
 	//slient aim
 	//I::Input->GetUserCmd()->SetSubTickAngle({ pViewAngles->x + vNewAngles.x - aimPunch.x , pViewAngles->y + vNewAngles.y - aimPunch.y * 2.f });
@@ -333,7 +363,7 @@ void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerControll
 void RCS_OnCreateMove(CCSGOInput* pCsgoInput, CUserCmd* pUserCmd,
 	QAngle_t* view_angles, CCSPlayerController* pLocalController)
 {
-	if (!trigger_bot_active)
+	if (!Globals::Aimbot::TriggerBot)
 		return;
 	
 	C_CSPlayerPawn pLocalPawn((uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pLocalController->GetPawnHandle()));
@@ -355,6 +385,7 @@ void RCS_OnCreateMove(CCSGOInput* pCsgoInput, CUserCmd* pUserCmd,
 
 	const Vector_t dst = pLocalPawn.GetEyePosition() + FromAngle(*view_angles+ correct_angle) * 3000.0f;
 	GameTrace_t trace = GameTrace_t();
+
 	TraceFilter_t filter = TraceFilter_t(0x1C3003, &pLocalPawn, nullptr, 4);
 	Ray_t ray = Ray_t();
 	I::GameTraceManager->TraceShape(&ray, pLocalPawn.GetEyePosition(), dst, &filter, &trace);

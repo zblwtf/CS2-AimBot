@@ -79,7 +79,7 @@ void do_esp()
     static int t_b = 255;
 
    
-    D3DCOLORVALUE enemy_color = { t_r, t_g, t_b,1.0f};
+    RGB enemy_color = { t_r, t_g, t_b};
   
 
     const int iHighestIndex = I::GameResourceService->pGameEntitySystem->GetHighestEntityIndex();
@@ -172,12 +172,12 @@ void do_esp()
     
 
 
-                g_myD3d11.DrawLine(bottomCenterX, bottomCenterY, rectBottomX, rectBottomY, enemy_color);
-                g_myD3d11.DrawBox(screenHead.x - width / 2,
+                Render::DrawLine(bottomCenterX, bottomCenterY, rectBottomX, rectBottomY, enemy_color,1);
+                Render::DrawRect(screenHead.x - width / 2,
                     screenHead.y,
                     width,
                     height,
-                    enemy_color);
+                    enemy_color,1);
 
 
            
@@ -192,20 +192,3 @@ void do_esp_destroy()
     
 }
 
-void do_present() {
-    
-        
-
-
-  
-
-     do_esp();
-
-
-
-   
-
-
-
-
-}

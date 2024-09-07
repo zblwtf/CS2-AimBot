@@ -287,5 +287,8 @@
     <ClCompile Include="D3D11\MyD3d11.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="global.hpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

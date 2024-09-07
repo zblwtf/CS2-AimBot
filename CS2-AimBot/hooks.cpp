@@ -15,15 +15,76 @@
 #include "iswapchaindx11.h"
 #include "esp.h"
 #include "D3D11/MyD3d11.h"
-extern HWND hWindow;
+#include "global.hpp"
 
+
+extern HWND hWindow;
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 MyD3D11 g_myD3d11{};
+static WNDPROC oWndProc = nullptr;
+
 
 safetyhook::MidHook g_createmove_hook{};
 safetyhook::InlineHook g_present_hook{};
 safetyhook::InlineHook g_resizebuffers_hook{};
 safetyhook::InlineHook g_createswapchain_hook{};
 
+
+void InitImGui()
+{
+	ImGui::CreateContext();
+
+	auto io = ImGui::GetIO();
+	auto& style = ImGui::GetStyle();
+
+	io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
+	io.IniFilename = nullptr;
+	io.LogFilename = nullptr;
+
+	style.WindowMinSize = ImVec2(256, 300);
+	style.WindowTitleAlign = ImVec2(0.5, 0.5);
+	style.FrameBorderSize = 1;
+	style.ChildBorderSize = 1;
+	style.WindowBorderSize = 1;
+	style.WindowRounding = 0;
+	style.FrameRounding = 0;
+	style.ChildRounding = 0;
+	style.Colors[ImGuiCol_TitleBg] = ImColor(70, 70, 70);
+	style.Colors[ImGuiCol_TitleBgActive] = ImColor(70, 70, 70);
+	style.Colors[ImGuiCol_TitleBgCollapsed] = ImColor(70, 70, 70);
+	style.Colors[ImGuiCol_WindowBg] = ImColor(25, 25, 25, 240);
+	style.Colors[ImGuiCol_CheckMark] = ImColor(70, 70, 70);
+	style.Colors[ImGuiCol_Border] = ImColor(70, 70, 70);
+	style.Colors[ImGuiCol_Button] = ImColor(32, 32, 32);
+	style.Colors[ImGuiCol_ButtonActive] = ImColor(42, 42, 42);
+	style.Colors[ImGuiCol_ButtonHovered] = ImColor(42, 42, 42);
+	style.Colors[ImGuiCol_ChildBg] = ImColor(45, 45, 45);
+	style.Colors[ImGuiCol_FrameBg] = ImColor(32, 32, 32);
+	style.Colors[ImGuiCol_FrameBgActive] = ImColor(42, 42, 42);
+	style.Colors[ImGuiCol_FrameBgHovered] = ImColor(42, 42, 42);
+	style.Colors[ImGuiCol_SliderGrab] = ImColor(255, 255, 255);
+	style.Colors[ImGuiCol_SliderGrabActive] = ImColor(255, 255, 255);
+
+	io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\Tahoma.ttf", 14.0f);
+
+	ImGui_ImplWin32_Init(hWindow);
+	ImGui_ImplDX11_Init(I::Device, I::DeviceContext);
+}
+
+
+LRESULT __stdcall WndProc(const HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
+
+	if (uMsg == WM_KEYUP && wParam == VK_HOME)
+		Globals::Open ^= 1;
+
+	if (Globals::Open)
+	{
+		if (ImGui_ImplWin32_WndProcHandler(hWnd, uMsg, wParam, lParam))
+			return true;
+	}
+
+	return CallWindowProc(oWndProc, hWnd, uMsg, wParam, lParam);
+}
 
 
 
@@ -140,7 +201,7 @@ bool H::Setup()
 
 void H::Destroy()
 {
-	
+	oWndProc = (WNDPROC)SetWindowLongPtr(hWindow, GWLP_WNDPROC, (LONG_PTR)oWndProc);
 	g_createmove_hook.~MidHook();
 	g_present_hook.reset();
 	g_resizebuffers_hook.reset();
@@ -228,40 +289,122 @@ bool __fastcall H::CreateMove(CCSGOInput* pInput, int nSlot, bool bActive,bool b
 
 
 
+void OnDraw()
+{
+	static auto Slider = [&](const char* label, float* value, float min, float max, float width = ImGui::GetContentRegionAvail().x)
+		{
+			ImGui::PushID(label);
+			ImGui::PushItemWidth(width);
+			ImGui::SliderFloat("##CustomSliderF_", value, min, max);
+			ImGui::PopItemWidth();
+			ImGui::PopID();
+			ImGui::Spacing();
+		};
+
+	static auto Checkbox = [&](const char* label, bool* value)
+		{
+			ImGui::PushID(label);
+			ImGui::Checkbox(label, value);
+			ImGui::PopID();
+			ImGui::Spacing();
+		};
+
+	if (Globals::Open) {
+		ImGui::Begin("D3D11 Hook", 0, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize);
+		{
+			if (ImGui::Button("Aimbot", ImVec2(ImGui::GetContentRegionAvail().x / 4, 29)))
+				Globals::Tab = 0;
+
+			ImGui::SameLine();
+
+			if (ImGui::Button("Visuals", ImVec2(ImGui::GetContentRegionAvail().x / 3, 29)))
+				Globals::Tab = 1;
+
+			ImGui::SameLine();
+
+			if (ImGui::Button("Other", ImVec2(ImGui::GetContentRegionAvail().x / 2, 29)))
+				Globals::Tab = 2;
+
+			ImGui::SameLine();
+
+			if (ImGui::Button("Settings", ImVec2(ImGui::GetContentRegionAvail().x / 1, 29)))
+				Globals::Tab = 3;
+
+			ImGui::Spacing();
+			ImGui::Separator();
+
+			switch (Globals::Tab)
+			{
+			case 0: // Aimbot
+				Checkbox("Aimbot Enabled", &Globals::Aimbot::Aim);
+				Checkbox("TriggerBot Enabled", &Globals::Aimbot::TriggerBot);
+				Checkbox("ByMouse Enabled", &Globals::Aimbot::ByMouse);
+				break;
+
+			case 1: // Visuals
+				Checkbox("ESP Enabled", &Globals::Visuals::Enabled);
+				break;
+
+			case 2: // Other
+				break;
+
+			case 3: // Settings
+				if (ImGui::Button("Unhook"))
+					Globals::IsClosing = true;
+				break;
+			}
+		}
+		ImGui::End();
+	}
+	if (Globals::Visuals::Enabled)
+	{
+		do_esp();
+	}
+}
+
 
 
 HRESULT __stdcall H::Present(IDXGISwapChain* pSwapChain, UINT uSyncInterval, UINT uFlags)
 {
-	/*if (!g_myD3d11.bDrawInit)
-	{
-		if (I::Engine->IsConnected() && I::Engine->IsInGame())
-			g_myD3d11.bDrawInit = g_myD3d11.InitDraw(pSwapChain);
 
-	}*/
-	
-	// recreate it if it's not valid
+
+
+
+
+
+
+
 	if (I::RenderTargetView == nullptr)
 		I::CreateRenderTarget();
 
+	static bool Init = false;
+	if (!Init)
+	{
+		
 
+			
+			oWndProc = (WNDPROC)SetWindowLongPtr(hWindow, GWLP_WNDPROC, (LONG_PTR)WndProc);
+			InitImGui();
+			Init = true;
+		
+	}
 
-	// set our render target
+	ImGui_ImplDX11_NewFrame();
+	ImGui_ImplWin32_NewFrame();
+	ImGui::NewFrame();
+
+	ImGui::GetIO().MouseDrawCursor = Globals::Open;
+	OnDraw();
+
+	ImGui::Render();
+
 	if (I::RenderTargetView != nullptr)
-		I::DeviceContext->OMSetRenderTargets(1, &I::RenderTargetView, nullptr);
-
+	{
+		I::DeviceContext->OMSetRenderTargets(1, &I::RenderTargetView, NULL);
+	}
 	
+	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
 	
-	//if (g_myD3d11.bDrawInit)
-	//{
-	//	//do_present();
-
-	//}
-
-
-	
-
-	
-
 	
 
 	return g_present_hook.stdcall<HRESULT>(I::SwapChain->pDXGISwapChain, uSyncInterval, uFlags);
