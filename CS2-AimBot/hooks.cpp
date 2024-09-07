@@ -349,8 +349,7 @@ void OnDraw()
 				break;
 
 			case 3: // Settings
-				if (ImGui::Button("Unhook"))
-					Globals::IsClosing = true;
+				
 				break;
 			}
 		}

@@ -60,7 +60,7 @@ QAngle_t GetAngularDifference(CBaseUserCmdPB* pCmd, Vector_t vecTarget, C_CSPlay
 
 
 	
-
+	 
 	float distance = sqrtf(powf(delta_vec.x, 2) + powf(delta_vec.y, 2));
 	float new_pitch = 0.0, new_yaw = 0.0;
 
@@ -102,9 +102,10 @@ Vector_t FromAngle(const QAngle_t& angle) noexcept {
 
 void F::OnCreateMove(CUserCmd* pCmd, CBaseUserCmdPB* pBaseCmd, CCSPlayerController* pLocalController)
 {
+	
 	if (!Globals::Aimbot::Aim)
 		return;
-	
+
 	C_CSPlayerPawn pLocalPawn((uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pLocalController->GetPawnHandle()));
 	if (pLocalPawn.pthis == NULL)
 		return;
@@ -365,14 +366,14 @@ void RCS_OnCreateMove(CCSGOInput* pCsgoInput, CUserCmd* pUserCmd,
 {
 	if (!Globals::Aimbot::TriggerBot)
 		return;
-	
+
 	C_CSPlayerPawn pLocalPawn((uintptr_t)I::GameResourceService->pGameEntitySystem->Get<C_CSPlayerPawn>(pLocalController->GetPawnHandle()));
 	if (pLocalPawn.pthis == NULL)
 		return;
 
 	if (!pLocalController->GetIsAlive())
 		return;
-
+	 
 	
 	const auto aimPunch = pLocalPawn.GetAimPunchCache();
 	

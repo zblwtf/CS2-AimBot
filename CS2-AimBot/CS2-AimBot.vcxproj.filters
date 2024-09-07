@@ -290,5 +290,8 @@
     <ClCompile Include="global.hpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

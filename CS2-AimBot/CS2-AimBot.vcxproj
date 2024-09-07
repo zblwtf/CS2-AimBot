@@ -217,6 +217,7 @@
     <ClCompile Include="ext\minhook\hook.c" />
     <ClCompile Include="ext\minhook\trampoline.c" />
     <ClCompile Include="global.hpp" />
+    <ClCompile Include="globals.cpp" />
     <ClCompile Include="hooks.cpp" />
     <ClCompile Include="ImGui\imgui.cpp" />
     <ClCompile Include="ImGui\imgui_demo.cpp" />

@@ -12,6 +12,7 @@ C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\ext\minhook\hde\hde64.c;C:\Use
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\ext\minhook\hook.c;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\hook.obj
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\ext\minhook\trampoline.c;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\trampoline.obj
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\global.hpp;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\global.obj
+C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\globals.cpp;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\globals.obj
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\hooks.cpp;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\hooks.obj
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\ImGui\imgui.cpp;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\imgui.obj
 C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\ImGui\imgui_demo.cpp;C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\x64\Release\imgui_demo.obj

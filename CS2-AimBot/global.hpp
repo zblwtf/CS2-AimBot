@@ -17,27 +17,19 @@ extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam
 
 namespace Globals
 {
-	
-	static bool IsClosing = false;
-	static bool Open = true;
-	static int Tab = 0;
+	extern bool Open;
+	extern  int Tab;
 
 	namespace Aimbot
 	{
-		static bool Aim = false;
-		static bool ByMouse = false;
-		static bool TriggerBot = true;
+		extern bool Aim;
+		extern  bool ByMouse;
+		extern bool TriggerBot;
 	}
 
 	namespace Visuals
 	{
-		static bool Enabled = false;
-		static bool Boxes = false;
-		static bool Corners = false;
-		static bool Snaplines = false;
-		static bool FilledBoxes = false;
-		static bool DisplayInfo = false;
-		static bool DisplayHealth = false;
-		static bool DisplayNames = false;
+		extern bool Enabled;
+		
 	}
 }

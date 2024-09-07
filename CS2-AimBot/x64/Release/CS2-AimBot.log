@@ -1,63 +1,6 @@
-﻿  aim.cpp
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
-  (编译源文件“aim.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(67,45): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(68,45): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(95,36): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(95,66): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(96,24): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(96,54): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\aim.cpp(97,25): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-  dllmain.cpp
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\tool.h(10,2): warning C4091: “typedef ”: 没有声明变量时忽略“window_size”的左侧
-  (编译源文件“dllmain.cpp”)
-  
-  esp.cpp
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,105): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,79): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,72): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,59): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(18,56): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,95): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,76): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,72): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,60): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\render.h(23,56): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
-  (编译源文件“esp.cpp”)
-  
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(82,25): warning C4838: 从“int”转换到“ImU32”需要收缩转换
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(82,30): warning C4838: 从“int”转换到“ImU32”需要收缩转换
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(82,35): warning C4838: 从“int”转换到“ImU32”需要收缩转换
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(160,25): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(161,25): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(179,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(178,21): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(177,31): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-C:\Users\23035\source\repos\CS2-AimBot\CS2-AimBot\esp.cpp(176,47): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
-  global.hpp
-  hooks.cpp
-  正在生成代码
-  22 of 2415 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
-    7 functions were new in current compilation
-    21 functions had inline decision re-evaluated but remain unchanged
+﻿  正在生成代码
+  0 of 2415 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   CS2-AimBot.vcxproj -> C:\Users\23035\source\repos\CS2-AimBot\x64\Release\CS2-AimBot.dll
