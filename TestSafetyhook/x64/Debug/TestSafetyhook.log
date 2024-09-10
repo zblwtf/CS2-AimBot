@@ -1,4 +1,0 @@
-﻿  TestSafetyhook.cpp
-C:\Users\23035\source\repos\CS2-AimBot\TestSafetyhook\TestSafetyhook.cpp(59,29): warning C4305: “参数”: 从“int”到“bool”截断
-C:\Users\23035\source\repos\CS2-AimBot\TestSafetyhook\TestSafetyhook.cpp(63,29): warning C4305: “参数”: 从“int”到“bool”截断
-  TestSafetyhook.vcxproj -> C:\Users\23035\source\repos\CS2-AimBot\x64\Debug\TestSafetyhook.exe
